@@ -1,10 +1,7 @@
 // @ts-nocheck
 import { DropsContractProvider, DropsComponents } from "@public-assembly/zora-drops-utils"
-import { VideoPlayer } from "./VideoPlayer"
 import { ImageRenderer } from "./ImageRenderer"
 import { MintEdition } from "./MintEdition"
-import { useCurationFunctions } from "@public-assembly/curation-interactions"
-import { useMemo } from "react"
 
 export function EditionsDisplay({curationContractAddress}: string) {
 
@@ -19,30 +16,6 @@ export function EditionsDisplay({curationContractAddress}: string) {
     "0x83b9f7ddd165e32ebea7da1b54405bf8c16708f7",
     "0x31bed60ae0627575725f4460139f095cd9e4a08b"
   ]  
-
-  // const { getListingsReturn: siteData } = useCurationFunctions({
-  //   curationContractAddress
-  // })
-
-  // console.log("siteData: ", siteData);
-
-  // const cleanListings = () => {
-  //   let arrayOfCollections = []
-    
-  //   siteData.map((collection => {
-  //     const collectionAddress = collection[0]
-  //     arrayOfCollections.push(collectionAddress)
-  //   }))
-  //   const finalArray = [...arrayOfCollections].reverse()
-  //   return finalArray
-  // }
-
-  // const finalListings = useMemo(
-  //   () => (siteData ? cleanListings() : []),
-  //   [siteData]
-  // )
-
-  // console.log("finalListings", finalListings)
 
   return (
     <section id="editions" className='grid grid-cols-1 sm:grid-cols-3 w-[90%] py-6 pb-20 '>
