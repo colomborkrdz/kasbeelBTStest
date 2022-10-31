@@ -9,7 +9,7 @@ import '@rainbow-me/rainbowkit/styles.css';
 const alchemyID = process.env.NEXT_PUBLIC_ALCHEMY_KEY
 
 const { chains, provider } = configureChains(
-  [chain.mainnet], 
+  [chain.goerli], 
   [
     alchemyProvider({ 
       apiKey: alchemyID,
