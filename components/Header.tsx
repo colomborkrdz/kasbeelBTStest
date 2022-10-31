@@ -12,7 +12,7 @@ export function Header() {
           We are releasing three artifacts that were integral to the cration of this new piece
         </span>
         <span className="text-[18px] flex flex-row w-full justify-center">
-          of infrastructure and in advance of the launch of the Builder DAO
+          of infrastructure and in advance of the launch of the Builder DAO.
         </span>        
       </div>
       <DisconnectButton />
