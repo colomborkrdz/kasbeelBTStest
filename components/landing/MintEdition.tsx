@@ -31,9 +31,11 @@ export function MintEdition() {
               </div>                                  
               <div className="bg-black text-white px-2 py-1 mt-5">
                 <DropsComponents.MintButton mintCta="mint" />
-              </div>               
-            </div>
-            <DropsComponents.TxStatus />
+              </div>                                       
+            </div>            
+            <div className="relative pt-5 w-full text-center">
+                <DropsComponents.TxStatus />
+            </div>     
           </>
         }
       />

@@ -5,7 +5,7 @@ export function Footer() {
     <div className=" relative mt-[20px] flex w-full flex-row items-center justify-center gap-[10px] md:mt-[35px] md:gap-[15px] md:pt-[5px]">
       <span>MADE WITH</span>
       <a
-        href={`https://create.zora.co/`}
+        href={`https://zora.co/`}
         className="relative h-[26px] w-[26px] overflow-visible md:h-[32px] md:w-[32px]"
       >
         <svg
