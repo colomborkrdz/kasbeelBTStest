@@ -1,5 +1,4 @@
-import { DropsComponents } from "@public-assembly/erc721-drops-minter"
-import { useDropsContractProvider } from "@public-assembly/zora-drops-utils"
+import { useDropsContractProvider, DropsComponents } from "@public-assembly/zora-drops-utils"
 import { AuthCheck } from "components/elements"
 
 function MintPropmpt() {
@@ -11,17 +10,28 @@ function MintPropmpt() {
 }
 
 export function MintEdition() {
-  const { mintStatus } = useDropsContractProvider()
-  if (mintStatus?.isEnded) return null
+  // const { mintStatus } = useDropsContractProvider()
+  // console.log("mintStatus", mintStatus)
+  // if (mintStatus?.isEnded) return null
   return (
     <div>
       <AuthCheck
         connectCopy={<MintPropmpt />}
         formUI={
           <>
-            <div className="flex flex-row gap-2">
-              <DropsComponents.MintButton className="w-auto" />
-              <DropsComponents.TotalPrice label={false} />    
+            <div className="flex flex-row w-full justify-center flex-wrap ">
+              <div className="w-full text-center">
+                <DropsComponents.TotalPrice label={"price?"} />                 
+              </div>           
+              <div className=" w-full text-center">
+                <DropsComponents.Inventory label={"minted?"} />                 
+              </div>   
+              <div className=" w-full text-center">
+                <DropsComponents.SalesTiming />                 
+              </div>                                  
+              <div className="bg-black text-white px-2 py-1 mt-5">
+                <DropsComponents.MintButton mintCta="mint" />
+              </div>               
             </div>
             <DropsComponents.TxStatus />
           </>

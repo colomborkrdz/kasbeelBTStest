@@ -6,7 +6,7 @@ function NetLabel({ Component, pageProps }: AppProps) {
   return (
     <AppWrapper>
       <Header />
-      <main className="px-6">
+      <main className="px-6 py-20 flex flex-col items-center">
         <Component {...pageProps} />
       </main>
     </AppWrapper>
