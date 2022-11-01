@@ -18,10 +18,11 @@ export function EditionsDisplay() {
   ]  
 
   return (
-    <section id="editions" className='image-renderer-grid grid grid-cols-1 sm:grid-cols-3 pb-20'>
+    <section id="editions" className='grid grid-cols-1 lg:grid-cols-3 pb-20'>
     {hardcodedGoerli.map((address) =>
-      <DropsContractProvider collectionAddress={address} key={address} networkId={process.env.NEXT_PUBLIC_NETWORK_URL} >
-        <div className="mx-2 sm:mx-0 flex flex-col pb-8">
+      <DropsContractProvider collectionAddress={address} key={address} networkId="5" >
+        <div className="edition-card mx-2 sm:mx-0 flex flex-col pb-8">
+
           <ImageRenderer  />
           <div className="flex flex-col">
             <div className="pt-8 flex flex-col items-center">
