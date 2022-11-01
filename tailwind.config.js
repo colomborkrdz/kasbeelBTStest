@@ -8,6 +8,14 @@ module.exports = {
     extend: {
       fontFamily: {
         arialNarrow: ['arialNarrow']
+      },
+      keyframes: {
+        flipback: {
+          "0%": { transform: "rotateY(180deg)" }
+        }
+      },
+      animation: {
+        flipback: "flipback 200ms ease-in-out"
       }
     }
   }

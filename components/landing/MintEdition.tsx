@@ -35,7 +35,7 @@ export function MintEdition() {
           {inventory?.totalSold + ` minted `}
         </div>   
         <div className=" w-full text-center">
-          <Countdown date={'2022-11-08T11:00:00'} 
+          <Countdown date={'2022-11-08T07:00:00'} 
             intervalDelay={1000}
             precision={0}
             renderer={countdownRenderer}
