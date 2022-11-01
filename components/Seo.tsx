@@ -4,7 +4,7 @@ const defaultTitle = process.env.NEXT_PUBLIC_SITE_TITLE || '';
 const defaultDescription = process.env.NEXT_PUBLIC_SITE_DESCRIPTION || '';
 const defaultOGURL = process.env.NEXT_PUBLIC_WEBSITE_URL || '';
 const defaultOGImage = `${process.env.NEXT_PUBLIC_WEBSITE_URL}/social-card.png`;
-const favicon = '/favicon.png'
+const favicon = '/builder-zorb_1.svg'
 
 type SeoProps = {
   title?: string,
@@ -27,6 +27,7 @@ export function Seo({ title, description, url, ogImage }: SeoProps) {
       <meta name="twitter:creator" content={`@${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`} />
       <meta name="twitter:site" content={url || defaultOGURL} />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:text:title" content={title ? `${defaultTitle} | ${title}` : defaultTitle} />
       <meta name="twitter:image" content={ogImage || defaultOGImage} />
       <meta property="og:image" content={ogImage || defaultOGImage} />
       <meta property="og:image:width" content="1200" />
