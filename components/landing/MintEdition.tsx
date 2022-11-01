@@ -27,8 +27,6 @@ export function MintEdition() {
 
   const mintCta = transaction?.purchaseSuccess ? "minted" : "mint"
 
-  console.log(transaction?.purchaseSuccess)
-
   return (
       <div className="flex flex-row w-full justify-center flex-wrap pt-10">
         <div className=" w-full text-center">
