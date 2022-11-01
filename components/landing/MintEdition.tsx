@@ -35,7 +35,6 @@ export function MintEdition() {
           {inventory?.totalSold + ` minted `}
         </div>   
         <div className=" w-full text-center">
-          <DropsComponents.SalesTiming />   
           <Countdown date={'2022-11-08T11:00:00'} 
             intervalDelay={1000}
             precision={0}
@@ -47,11 +46,11 @@ export function MintEdition() {
           formUI={
             <>
             {transaction?.purchaseSuccess ? (
-                <div className="bg-[#10D600] border-[1px] border-[#24FF00] text-white px-2 py-1 mt-5">
+              <div className="bg-[#10D600] border-[1px] border-[#24FF00] text-white px-2 py-1 mt-5">
                 <DropsComponents.MintButton mintCta="minted" />
               </div>                 
             ) : (
-              <div className="border-[1px] border-black hover:bg-white hover:text-black bg-black text-white px-2 py-1 mt-5">
+              <div className="border-[1px] border-black hover:bg-white hover:text-black bg-black text-white px-2 py-1 mt-8">
                 <DropsComponents.MintButton mintCta="mint" />
               </div>   
             )}
