@@ -1,4 +1,8 @@
+import { useState } from "react"
+
 export function Timeline() {
+
+    const [flipState, setFlipState] = useState(false);
 
     const timelineEvents = [
         'Idea — Completed',
@@ -32,6 +36,18 @@ export function Timeline() {
                     </div>
                 )}
             </div>
+
+            {/* <div onAnimationEnd={() => setFlipState(false)} onClick={() => {setFlipState(true)}} className={`${flipState && "animate-flipper"} flip-card `}>
+                <div className="flip-card-inner ">
+                    <div className="flip-card-front animate-flipback  ">
+                    <h3>Hover, please!</h3>
+                    </div>
+                    <div className="flip-card-back">
+                    <h3>Whoaaa!!!</h3>
+                    </div>
+                </div>
+            </div> */}
+
         </section>
     )
 }

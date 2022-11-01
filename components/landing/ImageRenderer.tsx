@@ -1,7 +1,11 @@
-import React from "react"
+// @ts-nocheck
+
+import {useState} from "react"
 import { DropsComponents, useDropsContractProvider } from "@public-assembly/zora-drops-utils"
 
 export function ImageRenderer() {
+
+    const [flipState, setFlipState] = useState(false);
 
     const { transaction } = useDropsContractProvider();
 
@@ -132,7 +136,7 @@ export function ImageRenderer() {
         { transaction?.purchaseSuccess ? (
             mintReciept()
         ) : (
-        <div className=" border-[1px] w-full relative aspect-square">    
+        <div className="border-[1px] w-full relative aspect-square">    
             <DropsComponents.Thumbnail style={{ width: '100%', height: '100%' }}  />
         </div>
         )}
