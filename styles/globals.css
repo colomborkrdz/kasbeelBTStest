@@ -148,3 +148,7 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+.image-renderer-grid:nth-child(1) {
+  border-left: 0px
+}

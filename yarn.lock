@@ -795,12 +795,10 @@
   resolved "https://registry.yarnpkg.com/@public-assembly/curation-interactions/-/curation-interactions-0.0.18-pre.tgz#25a4248a2c804adb78f3e05a62e7b1859a5cab05"
   integrity sha512-wsJFUcXhGqI3w6GWBlfHB1/rSfTg0awC+4Y3XIEKM+EL/41In6QcRnY6y53P9jhWLXxxs0UmTrj0PDwtCLpllw==
 
-"@public-assembly/zora-drops-utils@^0.1.51":
-  version "0.1.51"
-  resolved "https://registry.yarnpkg.com/@public-assembly/zora-drops-utils/-/zora-drops-utils-0.1.51.tgz#1667c474d4c8e4ad995b0ea80689ef671ce6e785"
-  integrity sha512-TDnRYTKBwncESzYoSALUvFq73aEG9j561xU7keCvxBgDiSNqwyFEOJ9mvHi+uxijldUKuv1HkKS2NW0dta/r2g==
-  dependencies:
-    "@ethersproject/constants" "^5.7.0"
+"@public-assembly/zora-drops-utils@^0.1.52":
+  version "0.1.52"
+  resolved "https://registry.yarnpkg.com/@public-assembly/zora-drops-utils/-/zora-drops-utils-0.1.52.tgz#75c9aec19ef5ef7328fbd4e20300c513b38cba9b"
+  integrity sha512-e1xlfUk3Y7Ors6aSj8G14zGjs2ERI6Lp/EGdrkNOVcPbo3H/tloa2aqbf3rqE4XM6jddzLWuCG6QibVQDWG4qw==
 
 "@rainbow-me/rainbowkit@^0.5.0":
   version "0.5.0"

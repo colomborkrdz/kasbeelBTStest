@@ -82,7 +82,6 @@ export function ImageRenderer() {
                         Ethereum
                     </div>
                 </div>        
-                {/* {madeWithZora()} */}
                 <div className=" mb-6  self-end justify-center   relative   flex w-full flex-row flex-wrap">
                 <a
                 href={`https://zora.co/`}
@@ -133,7 +132,7 @@ export function ImageRenderer() {
 
     return (
         <>
-        { transaction?.purchaseSuccess ? (
+        { !transaction?.purchaseLoading && !transaction?.purchaseWaitLoading && transaction?.purchaseSuccess ? (
             mintReciept()
         ) : (
         <div className="edition-card__image-renderer w-full relative aspect-square">    

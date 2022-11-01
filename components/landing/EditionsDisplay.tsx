@@ -22,6 +22,7 @@ export function EditionsDisplay() {
     {hardcodedGoerli.map((address) =>
       <DropsContractProvider collectionAddress={address} key={address} networkId="5" >
         <div className="edition-card mx-2 sm:mx-0 flex flex-col pb-8">
+
           <ImageRenderer  />
           <div className="flex flex-col">
             <div className="pt-8 flex flex-col items-center">
