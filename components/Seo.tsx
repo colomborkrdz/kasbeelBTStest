@@ -27,6 +27,7 @@ export function Seo({ title, description, url, ogImage }: SeoProps) {
       <meta name="twitter:creator" content={`@${process.env.NEXT_PUBLIC_TWITTER_HANDLE}`} />
       <meta name="twitter:site" content={url || defaultOGURL} />
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:text:title" content={title ? `${defaultTitle} | ${title}` : defaultTitle} />
       <meta name="twitter:image" content={ogImage || defaultOGImage} />
       <meta property="og:image" content={ogImage || defaultOGImage} />
       <meta property="og:image:width" content="1200" />

@@ -21,17 +21,39 @@ const countdownRenderer = ({ days, hours, minutes, seconds }) => {
 }
 
 export function MintEdition() {
-  const { purchase, mintStatus, transaction, inventory, balance } = useDropsContractProvider()
+  const { purchase, mintStatus, transaction, inventory, balance, totalPrice } = useDropsContractProvider()
   // console.log("mintStatus", mintStatus)
   // if (mintStatus?.isEnded) return null
 
+  console.log("totalPrice", totalPrice?.pretty)
+
   const mintCta = transaction?.purchaseSuccess ? "minted" : "mint"
+
+  const totalPriceRender = () => {
+    if(totalPrice?.pretty && totalPrice?.pretty == "0.0") {
+      return (
+      <div className=" w-full text-center">
+        {"Free"}                 
+      </div>          
+      )
+    } else if (totalPrice?.pretty && totalPrice?.pretty == "1.0") {
+      return (
+      <div className=" w-full text-center">
+        {"1 ETH"}              
+      </div>
+      )     
+    } else {
+      return (
+        <div className=" w-full text-center">
+          <DropsComponents.TotalPrice label={false} ethSymbol={" ETH"} />                 
+        </div>         
+      )
+    }
+  }
 
   return (
       <div className="flex flex-row w-full justify-center flex-wrap pt-10">
-        <div className=" w-full text-center">
-          <DropsComponents.TotalPrice label={false} ethSymbol={" ETH"} />                 
-        </div>           
+        {totalPriceRender()}
         <div className=" w-full text-center">
           {inventory?.totalSold + ` minted `}
         </div>   
