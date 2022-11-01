@@ -82,6 +82,7 @@ export function MintEdition() {
           connectCopy={<MintPropmpt />}
           formUI={
             <>
+                {/* <div className="h-10 border-2">                 */}
                 <button 
                   disabled={transaction?.purchaseSuccess}
                   onClick={() => purchase()} 
@@ -91,10 +92,11 @@ export function MintEdition() {
                       : transaction?.purchaseSuccess
                       ? "bg-[#10D600] border-[1px] border-[#24FF00] text-white" 
                       : "border-[1px]  border-black bg-black text-white hover:bg-white hover:text-black"
-                    } px-2 py-1 mt-5 w-[70px]`}
+                    }  min-h-[34px] h-[34px] px-2  mt-5 w-[70px]`}
                 >
                   {mintCta}
                 </button>        
+                {/* </div> */}
             </>
           }
           />                          
