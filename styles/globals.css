@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'arialNarrow';
-  src: local(''), url('../public/fonts/arial-narrow/ARIALN.TTF') format('ttf');
+  src: local(''), url('../public/fonts/arial_narrow/Arialn.ttf') format('woff');
   font-weight: normal;
   font-size: normal;
 }
@@ -19,7 +19,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "arialNarrow",  sans-serif, "Times New Roman", Times, serif;
+  font-family: 'arialNarrow',  sans-serif, "Times New Roman", Times, serif;
   font-weight: 300;
   font-size: 18px;
 }
