@@ -5,6 +5,7 @@
 :root {
   --header-height: 100px;
   --pa-pink: #FF89DE;
+  --link-green: #32CD32;
 }
 
 html,
@@ -47,7 +48,7 @@ main {
 }
 
 .text-underline:hover:after {
-  border-color: var(--pa-pink);
+  border-color: var(--link-green);
 }
 
 .pa--hero {
