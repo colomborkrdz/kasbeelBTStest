@@ -25,7 +25,6 @@ export function MintEdition() {
   // console.log("mintStatus", mintStatus)
   // if (mintStatus?.isEnded) return null
 
-
   return (
       <div className=" flex flex-row w-full justify-center flex-wrap pt-10">
         <div className=" w-full text-center">
@@ -41,8 +40,7 @@ export function MintEdition() {
             precision={0}
             renderer={countdownRenderer}
           />              
-        </div>         
-                        
+        </div>                                 
         <AuthCheck
           connectCopy={<MintPropmpt />}
           formUI={
