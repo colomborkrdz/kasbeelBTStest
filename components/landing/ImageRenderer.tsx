@@ -11,7 +11,7 @@ export function ImageRenderer() {
 
     const madeWithZora = () => {
         return (
-            <div className="border-2 h-full content-end relative flex w-full flex-row flex-wrap  justify-center ">
+            <div className="edition-card__image-renderer h-full content-end relative flex w-full flex-row flex-wrap  justify-center ">
                 <a
                 href={`https://zora.co/`}
                 className="relative h-[26px] w-[26px] overflow-visible md:h-[32px] md:w-[32px]"
@@ -136,8 +136,8 @@ export function ImageRenderer() {
         { transaction?.purchaseSuccess ? (
             mintReciept()
         ) : (
-        <div className="border-[1px] w-full relative aspect-square">    
-            <DropsComponents.Thumbnail style={{ width: '100%', height: '100%' }}  />
+        <div className="edition-card__image-renderer w-full relative aspect-square">    
+            <DropsComponents.Thumbnail style={{ width: '100%', height: '100%', position: 'absolute!important' }}  />
         </div>
         )}
         </>
