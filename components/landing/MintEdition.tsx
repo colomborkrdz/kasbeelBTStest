@@ -25,8 +25,6 @@ export function MintEdition() {
   // console.log("mintStatus", mintStatus)
   // if (mintStatus?.isEnded) return null
 
-  console.log("totalPrice", totalPrice?.pretty)
-
   const mintCta = transaction?.purchaseSuccess ? "minted" : "mint"
 
   const totalPriceRender = () => {
