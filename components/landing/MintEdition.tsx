@@ -54,7 +54,7 @@ export function MintEdition() {
                   className={`${transaction?.purchaseSuccess ? 
                     "bg-[#10D600] border-[1px] border-[#24FF00] text-white" :  
                     "border-[1px]  border-black bg-black text-white hover:bg-white hover:text-black"}
-                    px-2 py-1 mt-5 w-[75px]`}
+                    px-2 py-1 mt-5 w-[70px]`}
                 >
                   {mintCta}
                 </button>            
