@@ -51,7 +51,9 @@ export function MintEdition() {
             </>
           }
           /> 
-        <DropsComponents.TxStatus />                                         
+        <div className=" w-full text-center pt-2">
+          <DropsComponents.TxStatus />         
+        </div>                                
       </div>            
   )
 }
