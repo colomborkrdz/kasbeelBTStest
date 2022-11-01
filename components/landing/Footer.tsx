@@ -2,7 +2,7 @@ import React from "react";
 
 export function Footer() {
   return (
-    <div className=" relative mt-[20px] flex w-full flex-row items-center justify-center gap-[10px] md:mt-[35px] md:gap-[15px] md:pt-[5px]">
+    <div className=" relative pb-16 sm:pb-10 flex w-full flex-row items-center justify-center gap-[10px] md:mt-[35px] md:gap-[15px] md:pt-[5px]">
       <span>MADE WITH</span>
       <a
         href={`https://zora.co/`}

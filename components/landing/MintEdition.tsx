@@ -6,16 +6,16 @@ import Countdown from "react-countdown"
 
 function MintPropmpt() {
   return (
-    <div className="mint-prompt ">
+    <div className="mt-5 mint-prompt ">
       <span>Connect wallet to mint</span>
     </div>
   )
 }
 
-const countdownRenderer = ({ hours, minutes, seconds }) => {
+const countdownRenderer = ({ days, hours, minutes, seconds }) => {
   return (
     <div>
-      {`${hours}h ` + `${minutes}m ` + `${seconds}s`}
+      {`${days}d ` + `${hours}h ` + `${minutes}m ` + `${seconds}s`}
     </div>
   )
 }
@@ -27,10 +27,9 @@ export function MintEdition() {
 
 
   return (
-    <div className="flex flex-col w-full ">
-      <div className=" flex flex-row w-full justify-center flex-wrap ">
+      <div className=" flex flex-row w-full justify-center flex-wrap pt-10">
         <div className=" w-full text-center">
-          <DropsComponents.TotalPrice label={false} />                 
+          <DropsComponents.TotalPrice label={false} ethSymbol={" ETH"} />                 
         </div>           
         <div className=" w-full text-center">
           {inventory?.totalSold + ` minted `}
@@ -48,7 +47,7 @@ export function MintEdition() {
           connectCopy={<MintPropmpt />}
           formUI={
             <>
-            <div className="bg-black text-white px-2 py-1 mt-5">
+            <div className="bg-black hover:bg-slate-800 text-white px-2 py-1 mt-5">
               <DropsComponents.MintButton mintCta="mint" />
             </div>   
             </>
@@ -56,6 +55,5 @@ export function MintEdition() {
           /> 
         <DropsComponents.TxStatus />                                         
       </div>            
-    </div>
   )
 }
