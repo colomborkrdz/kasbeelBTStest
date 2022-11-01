@@ -21,10 +21,13 @@ const countdownRenderer = ({ days, hours, minutes, seconds }) => {
 }
 
 export function MintEdition() {
-  const { mintStatus, transaction, inventory, balance } = useDropsContractProvider()
+  const { purchase, mintStatus, transaction, inventory, balance } = useDropsContractProvider()
   // console.log("mintStatus", mintStatus)
   // if (mintStatus?.isEnded) return null
 
+  const mintCta = transaction?.purchaseSuccess ? "minted" : "mint"
+
+  console.log(transaction?.purchaseSuccess)
 
   return (
       <div className="flex flex-row w-full justify-center flex-wrap pt-10">
@@ -45,21 +48,46 @@ export function MintEdition() {
           connectCopy={<MintPropmpt />}
           formUI={
             <>
-            {transaction?.purchaseSuccess ? (
-              <div className="bg-[#10D600] border-[1px] border-[#24FF00] text-white px-2 py-1 mt-5">
-                <DropsComponents.MintButton mintCta="minted" />
-              </div>                 
-            ) : (
-              <div className="border-[1px] border-black hover:bg-white hover:text-black bg-black text-white px-2 py-1 mt-8">
-                <DropsComponents.MintButton mintCta="mint" />
-              </div>   
-            )}
+                <button 
+                  disabled={transaction?.purchaseSuccess}
+                  onClick={() => purchase()} 
+                  className={`${transaction?.purchaseSuccess ? 
+                    "bg-[#10D600] border-[1px] border-[#24FF00] text-white" :  
+                    "border-[1px]  border-black bg-black text-white hover:bg-white hover:text-black"}
+                    px-2 py-1 mt-5 w-[75px]`}
+                >
+                  {mintCta}
+                </button>            
             </>
           }
           />                          
       </div>            
   )
 }
+
+
+// old logic for mint button
+{/* {transaction?.purchaseSuccess == true ? (
+  <div className="bg-[#10D600] border-[1px] border-[#24FF00] text-white px-2 py-1 mt-5">
+    <DropsComponents.MintButton mintCta={mintCta} />
+    <div>
+      {transaction?.purchaseSuccess.toString()}
+    </div>
+    <button 
+      onClick={() => purchase()} 
+      className={`${transaction?.purchaseSuccess ? 
+        "bg-[#10D600] border-[1px] border-[#24FF00] text-white" :  
+        "bg-black text-white"}
+        px-2 py-1`}
+    >
+      {mintCta}
+    </button>
+  </div>                 
+) : (
+  <div className="border-[1px] border-black hover:bg-white hover:text-black bg-black text-white px-2 py-1 mt-8">
+    <DropsComponents.MintButton mintCta={mintCta} />
+  </div>   
+)} */}
 
 
 // old logic for mint success ui
