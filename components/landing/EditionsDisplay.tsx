@@ -21,7 +21,7 @@ export function EditionsDisplay() {
     <section id="editions" className='grid grid-cols-1 sm:grid-cols-3 pb-20'>
     {hardcodedGoerli.map((address) =>
       <DropsContractProvider collectionAddress={address} key={address} networkId="5" >
-        <div className="flex flex-col pb-8">
+        <div className="mx-2 sm:mx-0 flex flex-col pb-8">
           <ImageRenderer  />
           <div className="flex flex-col">
             <div className="pt-8 flex flex-col items-center">
