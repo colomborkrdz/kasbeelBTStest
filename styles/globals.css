@@ -54,7 +54,7 @@ header {
 /* Style Drops UI */
 .drops-ui__mint-button--button,
 .connect__button {
-  @apply w-auto text-underline
+  @apply w-auto 
 }
 
 @keyframes pulse {

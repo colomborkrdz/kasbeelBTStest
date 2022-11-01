@@ -5,7 +5,7 @@ export function DisconnectButton() {
   if (!isConnected) return null
   return (
     <button
-      className="text-sm right-2 top-2 sm:text-lg sm:right-10 sm:top-10 absolute hover:text-[#FF89DE]"
+      className="text-md right-8 top-8 sm:text-lg sm:right-10 sm:top-10 absolute hover:text-[#32CD32]"
       onClick={() => logout()}>
       Disconnect
     </button>

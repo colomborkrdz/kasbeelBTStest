@@ -6,7 +6,7 @@ function NetLabel({ Component, pageProps }: AppProps) {
   return (
     <AppWrapper>
       <Header />
-      <main className="px-4 sm:px-20 pb-6">
+      <main className="px-2 sm:px-20 pb-6">
         <Component {...pageProps} />
       </main>
     </AppWrapper>

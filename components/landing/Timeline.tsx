@@ -22,12 +22,12 @@ export function Timeline() {
 
     return (
         <section className='grid grid-cols-1 pb-10'>
-            <div className="flex flex-row  text-center flex-wrap text-[24px]">
+            <div className="flex flex-row  text-center flex-wrap text-[22px] sm:text-[24px]">
                 <div className="w-full mb-6">
                     SEQUENCE OF EVENTS
                 </div>
                 {timelineEvents.map((tEvent, index) => 
-                    <div className="w-full " key={index}>
+                    <div className="w-full text-[19px] sm:text-[24px]" key={index}>
                         {tEvent}
                     </div>
                 )}
