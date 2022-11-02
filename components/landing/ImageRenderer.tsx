@@ -1,9 +1,16 @@
 // @ts-nocheck
 import { DropsComponents, useDropsContractProvider } from "@public-assembly/zora-drops-utils"
+import { useWaitForTransaction } from "wagmi"
 
 export function ImageRenderer() {
 
     const { transaction } = useDropsContractProvider();
+
+    const { isLoading: purchaseWaitLoading } =
+    useWaitForTransaction({
+      hash: transaction?.txHash
+    })
+
 
     const mintReciept = () => {
         return (
@@ -79,7 +86,7 @@ export function ImageRenderer() {
 
     return (
         <>
-        { !transaction?.purchaseLoading && !transaction?.purchaseWaitLoading && transaction?.purchaseSuccess ? (
+        { !transaction?.purchaseLoading && (transaction && !purchaseWaitLoading) && transaction?.purchaseSuccess ? (
             mintReciept()
         ) : (
         <div className="edition-card__image-renderer w-full relative aspect-square">    
