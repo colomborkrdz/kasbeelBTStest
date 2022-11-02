@@ -18,7 +18,7 @@ export function Timeline() {
         'Deploy to production — Completed',
         'Aquire nounsbuilder.eth — Completed',
         '20 Nouns in zora.eth — Completed',
-        'Submit proposal onchain — 1/1 November',
+        'Submit proposal onchain — 1 November',
         'Proposal executed — ~7 November',
         'Builder DAO starts — ~15 November',
         '??? — Imagine'       
