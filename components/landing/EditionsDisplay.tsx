@@ -16,6 +16,7 @@ export function EditionsDisplay() {
     "0x83b9f7ddd165e32ebea7da1b54405bf8c16708f7",
     "0x31bed60ae0627575725f4460139f095cd9e4a08b"
   ]  
+  
 
   return (
     <section id="editions" className='grid grid-cols-1 lg:grid-cols-3 pb-20'>

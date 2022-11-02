@@ -2,6 +2,7 @@
 
 import { useDropsContractProvider, DropsComponents } from "@public-assembly/zora-drops-utils"
 import { AuthCheck } from "components/elements"
+import { useWaitForTransaction } from "wagmi"
 import Countdown from "react-countdown"
 
 function MintPropmpt() {
@@ -37,7 +38,12 @@ export function MintEdition() {
   // console.log("mintStatus", mintStatus)
   // if (mintStatus?.isEnded) return null
 
-  const mintCta = transaction?.purchaseLoading || transaction?.purchaseWaitLoading 
+  const { data: purchaseWaitData, isLoading: purchaseWaitLoading } =
+    useWaitForTransaction({
+      hash: transaction?.txHash
+    })
+
+  const mintCta = transaction?.purchaseLoading || transaction && purchaseWaitLoading
     ? svgLoader() 
     : transaction?.purchaseSuccess
     ? "minted" 
@@ -87,7 +93,7 @@ export function MintEdition() {
                   disabled={transaction?.purchaseSuccess}
                   onClick={() => purchase()} 
                   className={
-                    `${transaction?.purchaseLoading || transaction?.purchaseWaitLoading ?
+                    `${transaction?.purchaseLoading || transaction && purchaseWaitLoading ?
                       "text-black bg-white border-black border-[1px]"
                       : transaction?.purchaseSuccess
                       ? "bg-[#10D600] border-[1px] border-[#24FF00] text-white" 
