@@ -20,13 +20,7 @@ export function ImageRenderer() {
                         <a className="hover:underline" href={`https://goerli.etherscan.io/tx/${transaction?.txHash}`}>
                         view on etherscan
                         </a>    
-                    </div>
-                    {/* <div className=" justify-center w-full flex flex-row flex-wrap ">
-                        view on IPFS
-                    </div>
-                    <div className=" justify-center w-full flex flex-row flex-wrap ">
-                        view metadata 
-                    </div> */}
+                    </div>                                                  
                 </div>
                 <div className=" self-center h-fit w-full flex flex-row flex-wrap ">
                     <div className=" justify-center w-full flex flex-row flex-wrap ">

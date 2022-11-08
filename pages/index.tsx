@@ -8,7 +8,7 @@ const Home: NextPage = () => {
     <>
       <Seo/>
       <EditionsDisplay />
-      <Timeline />
+      {/* <Timeline /> */}
       <Footer />
     </>
   )

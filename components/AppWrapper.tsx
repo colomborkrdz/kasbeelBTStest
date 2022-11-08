@@ -2,20 +2,21 @@ import NextNProgress from 'nextjs-progressbar'
 import { getDefaultWallets, RainbowKitProvider, lightTheme } from '@rainbow-me/rainbowkit'
 import { createClient, chain, configureChains, WagmiConfig } from 'wagmi'
 import { publicProvider } from 'wagmi/providers/public'
-import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { SWRConfig } from 'swr'
 import '@rainbow-me/rainbowkit/styles.css';
-
-const alchemyID = process.env.NEXT_PUBLIC_ALCHEMY_KEY
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const { chains, provider } = configureChains(
-  [chain.goerli], 
-  [
-    alchemyProvider({ 
-      apiKey: alchemyID,
-      priority: 0 
+
+  [chain.mainnet],
+  [ 
+    jsonRpcProvider({
+      priority: 0,
+      rpc: (chain) => (chain.id === 1 
+        ? { http: `https://rpc.ankr.com/eth` } 
+        : { http: `https://rpc.ankr.com/eth_goerli`})
     }),
-    publicProvider()
+    // publicProvider()
   ]
 )
 

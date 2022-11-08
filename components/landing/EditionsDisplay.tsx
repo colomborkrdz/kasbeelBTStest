@@ -2,29 +2,26 @@
 import { DropsContractProvider, DropsComponents } from "@public-assembly/zora-drops-utils"
 import { ImageRenderer } from "./ImageRenderer"
 import { MintEdition } from "./MintEdition"
+import Image from "next/image"
 
 export function EditionsDisplay() {
 
-  const hardcodedMainnet = [
-    "0x2f0146ca3c62a33177959565ae9df2f86cf01551",
-    "0xd945f759d422ae30a6166838317b937de08380e3",
-    "0xcab1d8574d1a38651f544bbc45ce32541790abef"
-  ]
-
-  const hardcodedGoerli = [
-    "0xa3ba36ce1af5fa6bb8ab35a61c8ae72293b38b32",
-    "0x83b9f7ddd165e32ebea7da1b54405bf8c16708f7",
-    "0x31bed60ae0627575725f4460139f095cd9e4a08b"
-  ]  
+  const btsContractAddress = "0x6ea3b458b47410239e92ffc1136afc838dd01156";
   
-
   return (
-    <section id="editions" className='grid grid-cols-1 lg:grid-cols-3 pb-20'>
-    {hardcodedGoerli.map((address) =>
-      <DropsContractProvider collectionAddress={address} key={address} networkId="5" >
-        <div className="edition-card mx-2 sm:mx-0 flex flex-col pb-8">
-
-          <ImageRenderer  />
+    <section id="editions" className='grid grid-cols-1 justify-items-center'>
+      <DropsContractProvider collectionAddress={btsContractAddress} key={btsContractAddress} networkId="1" >
+        <div className="edition-card w-full sm:w-[75%] md:w-[33%] mx-2 sm:mx-0 flex flex-col justify-end pb-16">
+          <div className="h-[400px] w-full  flex flex-col">
+            <Image 
+              height={450}
+              width={300}
+              layout='responsive'
+              objectFit='contain'
+              src={"https://ipfs.io/ipfs/bafkreiekrwyr4p3va77rnyad6urnfjuoisnwfxwl2zb5adz3q6q5buy4ye"}
+            />
+          </div>
+          {/* <ImageRenderer  /> */}
           <div className="flex flex-col">
             <div className="pt-8 flex flex-col items-center">
               <DropsComponents.MetadataName label={false} />
@@ -34,7 +31,6 @@ export function EditionsDisplay() {
           </div>
         </div>
       </DropsContractProvider>
-    )}
     </section>  
   )
 }
